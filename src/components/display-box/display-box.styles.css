@@ -1,0 +1,28 @@
+.display-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #161b22;
+    padding: 1.4rem;
+    border-radius: 1rem;
+}
+
+h2 {
+    margin-bottom: 0.1rem;
+    font-size: 2.1rem;
+}
+
+img {
+    margin-top: 1rem;;
+    width: 42%;
+    height: auto;
+}
+
+span {
+    /* color: rgb(28, 144, 221); */
+    cursor: pointer;
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,7 @@
+const WeatherActionTypes = {
+    WEATHER_FETCH_PENDING: 'WEATHER_FETCH_PENDING',
+    WEATHER_FETCH_SUCCESS: 'WEATHER_FETCH_SUCCESS',
+    WEATHER_FETCH_FAILED: 'WEATHER_FETCH_FAILED'
+};
+
+export default WeatherActionTypes;
