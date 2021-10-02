@@ -18,21 +18,21 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        function success(position) {
-            window.alert(`LAT: ${position.coords.latitude}, LONG: ${position.coords.longitude}`);
-        }
+        // function success(position) {
+        //     window.alert(`LAT: ${position.coords.latitude}, LONG: ${position.coords.longitude}`);
+        // }
 
-        function error() {
-            console.log('Sorry, no position available.');
-        }
+        // function error() {
+        //     console.log('Sorry, no position available.');
+        // }
 
-        const options = {
-            enableHighAccuracy: true,
-            maximumAge: 0,
-            timeout: Infinity
-        };
+        // const options = {
+        //     enableHighAccuracy: true,
+        //     maximumAge: 0,
+        //     timeout: Infinity
+        // };
 
-        navigator.geolocation.watchPosition(success, error, options);
+        // navigator.geolocation.watchPosition(success, error, options);
         navigator.geolocation.getCurrentPosition(position => {
             const {onRequestWeatherData} = this.props;
             onRequestWeatherData(
