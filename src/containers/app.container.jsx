@@ -11,11 +11,28 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isCelsius: true
+            isCelsius: true,
+            lat: 0.0,
+            long: 0.0
         };
     }
 
     componentDidMount() {
+        function success(position) {
+            console.log(position.coords.latitude, position.coords.longitude);
+        }
+
+        function error() {
+            console.log('Sorry, no position available.');
+        }
+
+        const options = {
+            enableHighAccuracy: true,
+            maximumAge: 0,
+            timeout: Infinity
+        };
+
+        navigator.geolocation.watchPosition(success, error, options);
         navigator.geolocation.getCurrentPosition(position => {
             const {onRequestWeatherData} = this.props;
             onRequestWeatherData(
