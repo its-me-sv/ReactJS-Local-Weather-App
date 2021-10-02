@@ -19,7 +19,7 @@ class App extends React.Component {
 
     componentDidMount() {
         function success(position) {
-            window.alert(position.coords.latitude, position.coords.longitude);
+            window.alert(`LAT: ${position.coords.latitude}, LONG: ${position.coords.longitude}`);
         }
 
         function error() {
